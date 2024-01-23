@@ -1,0 +1,6 @@
+User-agent: *
+Crawl-delay: 5
+Host: SkyFactory.ru
+Disallow: /contact
+Disallow: /personal_account
+Sitemap: http://SkyFactory.ru

@@ -1,0 +1,245 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #232255;
+  color: #ffffff;
+  height: 144px;
+  padding-bottom: 38px;
+}
+
+.nav {
+  margin-top: 30px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-link img {
+  display: block;
+  width: 100px;
+  margin: 0 50%;
+  margin-top: 20px;
+}
+
+.nav__item {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.nav__list {
+  margin: 0 1px 0 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.nav__item {
+  margin: 0 24px;
+}
+
+.nav__link {
+  display: block;
+  padding: 9px 16px;
+  transition: background-color 0.2s ease-in-out;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav__link:hover {
+  color: #025fff;
+}
+
+.nav__list .nav__item-img {
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.form__search {
+  position: relative;
+  background: none;
+}
+
+.text__search {
+  border: 2px solid #0a9396;
+  width: 180%;
+  height: 60px;
+  border-radius: 5px;
+  margin-left: -180%;
+  font-weight: 600;
+  padding-left: 10px;
+  position: relative;
+}
+
+.buttonSearch {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 20px;
+  border: 2px solid #0a9396;
+  border-radius: 5px;
+  background-color: none;
+  font-size: 16px;
+  width: 100px;
+  text-align: center;
+  height: 40px;
+  color: #968c8c;
+  font-weight: 800;
+  background-color: #fff;
+}
+
+.hamburger-menu {
+  display: contents;
+}
+
+.cart {
+  border: none;
+  margin-top: -40px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #3aa3ba, #6c6c6c);
+  transition: 0.1s;
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Увеличиваем кнопку при наведении на нее */
+.cart:hover {
+  transform: scale(1.1);
+}
+
+/* Стилизуем счетчик товаров */
+.cart__num {
+  position: absolute;
+  background-color: #0a9396;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  top: -5px;
+  right: -5px;
+}
+
+/* Создание бургер меню */
+
+/* скрываем чекбокс */
+#menu__toggle {
+  opacity: 0;
+}
+
+/* стилизуем кнопку */
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  text-align: center;
+  top: 50px;
+  left: 50px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+  margin: 20px 12%;
+}
+
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+
+.menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+
+/* контейнер меню */
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+/* элементы меню */
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.menu__item:hover {
+  background-color: #cfd8dc;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+.text__menu {
+  position: absolute;
+  margin: 200%;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Шапка */

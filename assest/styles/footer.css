@@ -1,0 +1,74 @@
+.footer {
+    background-color: #353433;
+    width: 100%;
+    height: 300px;
+    padding: 35px 0 50px;
+}
+
+.logo__text {
+    font-size: 40px;
+    color: white;
+    line-height: 140%;
+    font-weight: 600;
+    margin-left: -30px;
+    margin-top: 30px;
+}
+
+.footer .footer-column {
+    margin-bottom: 10px;
+    line-height: 140%;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.column1 {
+    margin-top: -24px;
+}
+
+.list-unstyled {
+    line-height: 180%;
+    padding-left: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.alint-left {
+    margin-left: 50px;
+}
+
+.footer_link {
+    color: white;
+    margin-top: 10px;
+}
+
+.copyright {
+    color: white;
+    padding: 10px 0 20px;
+    text-align: center;
+    margin-left: 24rem;
+    margin-top: 2rem;
+}
+
+.left1 {
+    margin-left: 50px;
+}
+
+.banner__img {
+    display: none;
+}
+
+.checkbox {
+    display: none;
+}
+
+.one1 {
+    display: none;
+}
+
+.logo-link1 img {
+    display: block;
+    width: 100px;
+    /* margin: 0 20%; */
+} /* Подвал страницы */

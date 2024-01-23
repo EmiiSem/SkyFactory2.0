@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+  background: #060918;
+  width: 100%;
+  height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+body > .application {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  width: 100%;
+  height: 100%;
+}

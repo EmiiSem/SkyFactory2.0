@@ -1,0 +1,1036 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #232255;
+  color: #ffffff;
+  height: 144px;
+  padding-bottom: 38px;
+}
+
+.nav {
+  margin-top: 30px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-link img {
+  display: block;
+  width: 100px;
+  margin: 0 50%;
+  margin-top: 20px;
+}
+
+.nav__item {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.nav__list {
+  margin: 0 1px 0 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.nav__item {
+  margin: 0 24px;
+}
+
+.nav__link {
+  display: block;
+  padding: 9px 16px;
+  transition: background-color 0.2s ease-in-out;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav__link:hover {
+  color: #025fff;
+}
+
+.nav__list .nav__item-img {
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.form__search {
+  position: relative;
+  background: none;
+}
+
+.text__search {
+  border: 2px solid #0a9396;
+  width: 180%;
+  height: 60px;
+  border-radius: 5px;
+  margin-left: -180%;
+  font-weight: 600;
+  padding-left: 10px;
+  position: relative;
+}
+
+.buttonSearch {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 20px;
+  border: 2px solid #0a9396;
+  border-radius: 5px;
+  background-color: none;
+  font-size: 16px;
+  width: 100px;
+  text-align: center;
+  height: 40px;
+  color: #968c8c;
+  font-weight: 800;
+  background-color: #fff;
+}
+
+.hamburger-menu {
+  display: contents;
+}
+
+.cart {
+  border: none;
+  margin-top: -40px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #3aa3ba, #6c6c6c);
+  transition: 0.1s;
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Увеличиваем кнопку при наведении на нее */
+.cart:hover {
+  transform: scale(1.1);
+}
+
+/* Стилизуем счетчик товаров */
+.cart__num {
+  position: absolute;
+  background-color: #0a9396;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  top: -5px;
+  right: -5px;
+}
+
+/* Создание бургер меню */
+
+/* скрываем чекбокс */
+#menu__toggle {
+  opacity: 0;
+}
+
+/* стилизуем кнопку */
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  text-align: center;
+  top: 50px;
+  left: 50px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+  margin: 20px 12%;
+}
+
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+
+.menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+
+/* контейнер меню */
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* элементы меню */
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.menu__item:hover {
+  background-color: #cfd8dc;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+.text__menu {
+  position: absolute;
+  margin: 200%;
+  color: #fff;
+  font-weight: 600;
+}
+/* Шапка */
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.slider {
+  position: relative;
+  width: 1057px;
+  height: 363px;
+  margin-left: 50px;
+}
+
+.banner__slider {
+  width: 1057px;
+  height: 363px;
+}
+
+.text__banner {
+  position: absolute;
+  top: 15%;
+  left: 65px;
+  color: white;
+  width: 350px;
+  padding: 10px;
+}
+
+.bold {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.size {
+  font-size: 16px;
+}
+
+.button__item {
+  color: white;
+  width: 241px;
+  height: 32px;
+  background: rgba(0, 0, 0, 0.004);
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+}
+
+.f1 {
+  display: flex;
+  margin-left: 60px;
+}
+
+.main {
+  background-color: #060918;
+  height: 1800px;
+  padding-top: 18px;
+}
+
+.carousel {
+  margin: 0 auto;
+  position: relative;
+}
+
+.carousel .carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  list-style: none;
+  display: none;
+}
+
+.carousel .carousel-indicators li {
+  flex: 0 1 auto;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+  background-color: #343a40;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: none;
+}
+
+.carousel .carousel-indicators .active {
+  background-color: #025fff;
+  display: none;
+}
+
+.carousel .carousel-window {
+  width: 1057px;
+  height: 363px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel .carousel-slides {
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s;
+}
+
+.carousel .carousel-item {
+  height: 100%;
+}
+
+.carousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel .carousel-item .telescope__item-banner {
+  width: 169px;
+  height: 253px;
+}
+
+.carousel .carousel-prev,
+.carousel .carousel-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5%;
+  color: #fff;
+  opacity: 0.7;
+  text-align: center;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+.carousel .carousel-prev:hover,
+.carousel .carousel-next:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.carousel .carousel-prev {
+  left: 0;
+}
+
+.carousel .carousel-next {
+  right: 0;
+}
+
+.text__banner {
+  position: absolute;
+  top: 15%;
+  left: 65px;
+  color: white;
+  width: 350px;
+  padding: 10px;
+}
+
+.bold {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.size {
+  font-size: 16px;
+}
+
+.button__item {
+  color: white;
+  width: 241px;
+  height: 32px;
+  background: rgba(0, 0, 0, 0.004);
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.telescope__item-banner {
+  margin-left: 180%;
+  margin-top: -100%;
+}
+
+.telescope__item-banner img {
+  width: 80px;
+  height: 120px;
+}
+/* Слайдер магазина */
+
+/* Основной раздел */
+.popular__telescopes {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 320px;
+  padding-left: 50px;
+}
+
+.item-block {
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+  margin-top: 16px;
+  background-color: #2aaec0;
+}
+
+.text_popular {
+  color: #fff;
+  font-weight: 900;
+}
+
+.product {
+  padding: 50px 0;
+}
+
+.product__info {
+  margin-bottom: 40px;
+}
+
+.product__title {
+  display: inline-block;
+  font-size: 2rem;
+  margin-right: 7px;
+}
+
+.product__title--gray {
+  color: #b3b3b7;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 225px);
+  width: 100%;
+  max-width: 1056px;
+  justify-content: space-between;
+  column-gap: 30px;
+  row-gap: 40px;
+  margin: 0 auto auto 22.65rem;
+  background-color: none;
+}
+
+.card {
+  width: 225px;
+  min-height: 350px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  transition: 0.2s;
+  position: relative;
+}
+
+.card .card__label {
+  padding: 4px 8px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: #0a9396;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+}
+
+.card:hover {
+  box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+}
+
+.card__top {
+  flex: 0 0 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card__image {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card__image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: 0.2s;
+}
+
+.card__image:hover > img {
+  transform: scale(1.1);
+}
+
+.card__bottom {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  padding: 10px;
+}
+
+.card__prices {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.card__price {
+  flex: 0 0 50%;
+}
+
+.card__price:after {
+  content: "₽";
+  margin-left: 4px;
+  position: relative;
+}
+
+.card__price--discount {
+  font-weight: 700;
+  font-size: 19px;
+  color: #414141;
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+.card__price--discount::before {
+  content: "Со скидкой";
+  font-weight: 400;
+  font-size: 13px;
+  color: #bfbfbf;
+}
+
+.card__price--common {
+  font-weight: 400;
+  font-size: 17px;
+  color: #606060;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-end;
+}
+
+.card__price--common::before {
+  content: "Обычная";
+  font-weight: 400;
+  font-size: 13px;
+  color: #bfbfbf;
+}
+
+.card__title {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+  color: #414141;
+}
+
+.card__title:hover {
+  color: #216d9e;
+}
+
+.card__add {
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  font-size: 17px;
+  color: #0a9396;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #0a9396;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: auto;
+}
+
+.card__add:hover {
+  border: 1px solid #216d9e;
+  background-color: #216d9e;
+  color: #fff;
+}
+
+.cart:hover {
+  transform: scale(1.1);
+}
+
+.blocks {
+  display: flex;
+}
+
+.quastions {
+  display: flex;
+  flex-direction: column;
+  margin-top: 18px;
+  margin-left: 20rem;
+  padding-left: 50px;
+}
+
+.text_quastion {
+  color: #fff;
+  font-weight: 900;
+}
+
+.quastion__items {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1056px;
+  margin-left: -10px;
+}
+
+.quastion_item {
+  padding-top: 35px;
+  text-align: center;
+  border: 2px solid #fff;
+  width: 225px;
+  height: 293px;
+}
+
+.quastion_item:hover {
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #364364;
+  color: #fff;
+  transition: all 0.6s;
+  transform: scale(1.1);
+}
+
+.item3 {
+  margin-right: 50px;
+  margin-left: 50px;
+  width: 200px;
+  height: 265px;
+}
+
+.item1 {
+  width: 200px;
+  height: 265px;
+}
+
+.item4 {
+  margin-right: 50px;
+  width: 200px;
+  height: 265px;
+}
+
+.item2 {
+  margin-left: 50px;
+  width: 200px;
+  height: 265px;
+}
+
+.quastion_item img {
+  width: 175px;
+  height: 188px;
+}
+
+.quastion_item {
+  cursor: pointer;
+}
+
+.quastion_item_text {
+  color: #fff;
+  margin-top: 12px;
+}
+
+.text_magazine {
+  color: #fff;
+  font-weight: 700;
+}
+
+.about__magazine {
+  margin-top: 77px;
+  margin-left: -18px;
+  max-width: 1000px;
+  margin-bottom: 50px;
+}
+
+.text_about {
+  color: #fff;
+  line-height: 140%;
+}
+
+.footer {
+  background-color: #353433;
+  width: 100%;
+  height: 280px;
+  padding: 35px 0 50px;
+}
+
+.logo__text {
+  font-size: 40px;
+  color: white;
+  line-height: 140%;
+  font-weight: 600;
+  margin-left: -30px;
+  margin-top: 30px;
+}
+
+.footer .footer-column {
+  margin-bottom: 10px;
+  line-height: 140%;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.column1 {
+  margin-top: -24px;
+}
+
+.list-unstyled {
+  line-height: 180%;
+  padding-left: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.alint-left {
+  margin-left: 50px;
+}
+
+.footer_link {
+  color: white;
+  margin-top: 10px;
+}
+
+.copyright {
+  color: white;
+  padding: 10px 0 20px;
+  text-align: center;
+  margin-left: 24rem;
+  margin-top: 2rem;
+}
+
+.banner__img {
+  display: none;
+}
+
+.checkbox {
+  display: none;
+}
+
+.one1 {
+  display: none;
+}
+
+.logo-link1 img {
+  display: block;
+  width: 100px;
+  /* margin: 0 20%; */
+} /* Подвал страницы */
+
+@media (max-width: 400px) {
+  .menu__toggle {
+    display: none;
+  }
+
+  .slider {
+    display: none;
+  }
+
+  .carousel {
+    display: none;
+  }
+
+  .carousel-prev {
+    display: none;
+  }
+
+  .carousel-next {
+    display: none;
+  }
+
+  .banner__img {
+    display: block;
+    width: 386px;
+    height: 136px;
+    border-radius: 8px;
+    background-image: url("../img/banner.png");
+  }
+
+  .banner2 {
+    display: none;
+  }
+
+  .slider__item {
+    display: none;
+  }
+
+  .logo_png {
+    margin-left: 2.875rem;
+    margin-top: 0.1rem;
+  }
+
+  .logo_png::after {
+    content: "SkyFactory";
+    font-family: "Open Sans", sans-serif;
+    color: black;
+    font-size: 20px;
+  }
+
+  .logo_png::before {
+    margin-right: 40px;
+  }
+
+  .logo_png::after {
+    margin-left: 60px;
+  }
+
+  .logo_png img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .menu__btn {
+    margin-top: -20px;
+    margin-left: -2.5625rem;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    margin-left: -20rem;
+  }
+
+  .hamburger-menu {
+    z-index: 2;
+  }
+
+  .menu__box {
+    z-index: 2;
+  }
+
+  .menu__btn {
+    z-index: 999;
+  }
+
+  .menu__item:hover {
+    border-radius: 5px;
+    border: 2px solid #0a9396;
+  }
+
+  .bold1 {
+    z-index: 0;
+  }
+
+  .text__menu {
+    display: none;
+  }
+
+  #menu__toggle {
+    display: none;
+  }
+
+  .lk_link {
+    display: none;
+  }
+
+  .lk_img {
+    display: none;
+  }
+
+  .form__search {
+    display: none;
+  }
+
+  .header {
+    background-color: white;
+    color: #ffffff;
+    height: 104px;
+    border-bottom: 2px solid #0a9396;
+  }
+
+  /* .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    } */
+
+  .main {
+    width: 400px;
+    background: linear-gradient(
+      180deg,
+      rgba(221, 221, 221, 100%),
+      rgba(221, 221, 221, 0%)
+    );
+  }
+
+  .h4 {
+    display: none;
+  }
+
+  .footer {
+    width: 100%;
+    height: 400px;
+    margin-top: 28rem;
+  }
+
+  .logo__text {
+    font-size: 18px;
+    margin-right: 4rem;
+  }
+
+  .logo_lk {
+    margin-left: 1rem;
+    margin-right: auto;
+  }
+
+  .img_log {
+    width: 80px;
+    height: 80px;
+  }
+
+  .footer__section {
+    margin-top: 1.35rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 2fr 28px 2fr;
+  }
+
+  .carousel {
+    width: 400px;
+    margin-left: -62px;
+  }
+
+  .carousel-window {
+    width: 400px;
+  }
+
+  .slider {
+    width: 400px;
+    height: 380px;
+  }
+
+  .slider__item {
+    width: 380px;
+    height: 136px;
+  }
+
+  .banner__slider {
+    width: 380px;
+    height: 136px;
+    border-radius: 6px;
+  }
+
+  .text__banner {
+    display: block;
+    width: 370px;
+    height: 136px;
+  }
+
+  .bold1 {
+    width: 30px;
+    padding-top: 10px;
+    padding-left: 20px;
+  }
+
+  .text__banner p {
+    font-size: 20px;
+    display: block;
+    margin-left: -40px;
+  }
+
+  .text__banner .size {
+    display: none;
+  }
+
+  .button__item {
+    display: none;
+  }
+
+  .telescope__item-banner {
+    margin-top: -11rem;
+    margin-left: 10rem;
+    width: 80px;
+    height: 120px;
+  }
+}
