@@ -4,7 +4,7 @@ $styleType = "";
 
 if (strpos($currentController, "catalog/product") !== false) {
     $styleType = "cart_page";
-} else if (strpos($currentController, "catalog") && !strpos($currentController, "product") !== false) {
+} else if (strpos($currentController, "catalog") !== false && !strpos($currentController, "product") !== false) {
     $styleType = "catalog_page";
 }
 

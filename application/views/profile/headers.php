@@ -4,7 +4,7 @@ $description = "";
 
 if (strpos($currentController, 'profile/edit') !== false) {
     $description = "Редактирование данных личного кабинета интернет магазина телескопов SkyFactory";
-} else if (strpos($currentController, 'profile') && !strpos($currentController, 'edit')) {
+} else if (strpos($currentController, 'profile') !== false && !strpos($currentController, 'edit') !== false) {
     $description = "Личный кабинет Интернет магазина SkyFactory";
 }
 ?>

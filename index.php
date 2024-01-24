@@ -2,6 +2,8 @@
 
 use application\core\Router;
 
+include_once __DIR__ . "/application/lib/dev.php";
+
 spl_autoload_register(function ($class) {
     $path = str_replace('\\', '/', $class . '.php');
 
@@ -13,4 +15,9 @@ spl_autoload_register(function ($class) {
 session_start();
 
 $router = new Router();
-$router->run();
+
+if (substr($_REQUEST['uri'], 0, 3) === 'api') {
+    $router->runApi();
+} else {
+    $router->run();
+}

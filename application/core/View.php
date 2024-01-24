@@ -58,6 +58,16 @@ class View
         exit;
     }
 
+    public static function errorApiCode($code, $message) 
+    {
+        http_response_code($code);
+        header('Content-Type: application/json');
+        echo json_encode([
+            "error_code" => $code,
+            "message" => $message
+        ]);
+    }
+
     public function message($status, $message)
     {
         exit(json_encode(['status' => $status, 'message' => $message]));

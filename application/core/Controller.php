@@ -9,11 +9,17 @@ abstract class Controller
     public $route;
     public $view;
     public $model;
+    private $isApi;
 
-    public function __construct($route)
+    public function __construct($route, $isApi)
     {
         $this->route = $route;
-        $this->view = new View($route);
+        $this->isApi = $isApi;
+        
+        if (!$isApi) {
+            $this->view = new View($route);
+        }
+
         $this->model = $this->loadModel($route['controller']);
     }
 
