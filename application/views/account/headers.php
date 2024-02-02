@@ -2,9 +2,9 @@
 $currentController = trim($_SERVER["REQUEST_URI"], '/');
 $description = "";
 
-if (str_contains($currentController, "account/login")) {
+if (strpos($currentController, "account/login") !== false) {
     $description = "Авторизация в интернет-магазине телескопов SkyFactory";
-} else if (str_contains($currentController, "account/register")) {
+} else if (strpos($currentController, "account/register") !== false) {
     $description = "Регистрация в интернет-магазине телескопов SkyFactory";
 }
 

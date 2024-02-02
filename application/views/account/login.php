@@ -11,21 +11,20 @@
     </div>
     <!-- ./subpage_nav -->
 
-    <h1 class="page__title">Страница авторизации</h1>
-    <p class="subtitle">Если вы не зарегистрированы, то <a href="Register_page.php">зарегистрируйтесь</a></p>
+    <h1 class="page__title">Авторизация</h1>
+    <p class="subtitle">Если вы не зарегистрированы, то <a href="/account/register">зарегистрируйтесь</a></p>
 
-    <form action="./include/login.php" method="POST">
-
-        <div class="inp-wrapper">
-            <input type="text" class="inp-field" name="login" placeholder="Логин">
-        </div>
-
-        <div class="inp-wrapper">
-            <input type="password" class="inp-field" name="password" placeholder="Введите пароль">
-        </div>
-
-        <button class="btn1 btn-md btn-base-brand-1 btn2">Авторизироваться</button>
-
+    <form id="login_form" action="">
+        <fieldset>
+            <div class="inp-wrapper">
+                <input type="text" class="inp-field" name="login" placeholder="Введите логин">
+            </div>
+            <div class="inp-wrapper">
+                <input type="password" class="inp-field" name="password" placeholder="Введите пароль">
+            </div>
+        </fieldset>
+        <button type='submit' class="btn1 btn-md btn-base-brand-1 btn2">Авторизироваться</button>
     </form>
-
 </div>
+
+<script src="/assest/scripts/account.js"></script>

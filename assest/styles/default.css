@@ -22,3 +22,12 @@ body > .application {
   width: 100%;
   height: 100%;
 }
+
+form > .message {
+  display: block;
+  margin-left: 55px;
+  margin-top: 1rem;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}

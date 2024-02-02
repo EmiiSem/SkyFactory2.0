@@ -8,6 +8,7 @@
         <?php echo $title; ?>
     </title>
     <meta name="robots" content="">
+    <script src="/assest/scripts/jquery.min.js"></script>
     <link rel="stylesheet" href="/assest/styles/default.css">
     <link rel="stylesheet" href="/assest/styles/header.css">
     <link rel="stylesheet" href="/assest/styles/footer.css">
@@ -29,5 +30,4 @@
     </div>
     <?php include 'footer.php'; ?>
 </body>
-
 </html>

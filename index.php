@@ -16,7 +16,7 @@ session_start();
 
 $router = new Router();
 
-if (substr($_REQUEST['uri'], 0, 3) === 'api') {
+if (isset($_REQUEST['uri']) === true and substr($_REQUEST['uri'], 0, 3) === 'api') {
     $router->runApi();
 } else {
     $router->run();
