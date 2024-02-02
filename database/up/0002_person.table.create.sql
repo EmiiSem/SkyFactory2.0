@@ -12,7 +12,9 @@ CREATE TABLE IF NOT EXISTS persons (
     created_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     
+    CONSTRAINT UQ__persons__external_guid UNIQUE (external_guid),
     CONSTRAINT FK__persons__users FOREIGN KEY (external_user_guid) REFERENCES users (external_guid)
+		ON DELETE CASCADE
 );
 
 COMMIT;
