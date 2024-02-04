@@ -16,6 +16,20 @@ class Db
         $this->db = new PDO('mysql:host=' . $config['host'] . ';dbname=' . $config['name'] . '', $config['user'], $config['password']);
     }
 
+    public function queryFirst(string $name, array $params = [])
+    {
+        $stmt = $this->execureProcedure($name, $params);
+        
+        $error = $stmt->errorInfo();
+
+        if (!empty($error) && isset($error[2])) {
+            throw new ErrorException($error[2]);
+        }
+
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
+    
     public function execute(string $name, array $params = []) {
         $stmt = $this->execureProcedure($name, $params);
     }

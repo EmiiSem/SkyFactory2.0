@@ -14,7 +14,14 @@ class AuthController extends Controller
 
         try {
             $result = $this->model->checkUserValid($params);
-            $this->Ok($result);
+
+            $user_guid = $result["external_guid"];
+
+            $_SESSION["user_external_guid"] = $user_guid;
+
+            session_write_close();
+
+            $this->Ok($user_guid);
         } catch (Exception $e) {
             $this->Error($e->getMessage());
         }

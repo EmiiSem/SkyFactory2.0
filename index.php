@@ -3,6 +3,8 @@
 use application\core\Router;
 
 include_once __DIR__ . "/application/lib/dev.php";
+include_once __DIR__ ."/application/lib/helpers.php";
+include __DIR__ . "/application/lib/session_manage.php";
 
 spl_autoload_register(function ($class) {
     $path = str_replace('\\', '/', $class . '.php');
@@ -11,8 +13,6 @@ spl_autoload_register(function ($class) {
         require $path;
     }
 });
-
-session_start();
 
 $router = new Router();
 

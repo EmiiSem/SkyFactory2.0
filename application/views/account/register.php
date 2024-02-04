@@ -1,3 +1,9 @@
+<?php
+if (IsAuthorized()) {
+    Redirect("/");
+}
+?>
+
 <div class="page container">
     <div class="subpage_nav">
         <ul class="breadcrumb-nav">

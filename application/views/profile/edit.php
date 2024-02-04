@@ -1,3 +1,9 @@
+<?php
+if (!IsAuthorized()) {
+    Redirect("/account/login");
+}
+?>
+
 <div class="page container">
 
     <div class="subpage_nav">
@@ -83,8 +89,7 @@
             </div>
 
             <div class="personal-form__grid">
-                <button class="personal-form__button btn-lg btn-base-brand-1" id="#buttonForm"
-                    type="submit">Сохранить</button>
+                <button class="personal-form__button btn-lg btn-base-brand-1" id="#buttonForm" type="submit">Сохранить</button>
                 <a href="#" class="personal-form__button personal-form__cancel">Отменить</a>
             </div>
 

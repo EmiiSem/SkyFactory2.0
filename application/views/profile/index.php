@@ -1,3 +1,9 @@
+<?php
+if (!IsAuthorized()) {
+    Redirect("/account/login");
+}
+?>
+
 <div class="page container">
 
     <div class="subpage_nav">

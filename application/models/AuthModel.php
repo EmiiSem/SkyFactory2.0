@@ -30,7 +30,7 @@ class AuthModel extends Model
             throw new Exception("Пользователя с тиким email не существуте");
         }
 
-        $isValid = $this->db->executeScalar("spCheckUserByEmailAndPassword", [
+        $user = $this->db->queryFirst("spCheckUserByEmailAndPassword", [
             [
                 "name" => "p_email",
                 "value" => $params['login'],
@@ -43,11 +43,11 @@ class AuthModel extends Model
             ]
         ]);
 
-        if (!boolval($isValid)) {
+        if (empty($user)) {
             throw new Exception("Неверный логин или пароль");
         }
 
-        return true;
+        return $user;
     }
 
     public function register(array $params)
