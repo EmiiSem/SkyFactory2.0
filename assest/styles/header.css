@@ -101,43 +101,66 @@ body {
   display: contents;
 }
 
-.cart {
-  border: none;
-  margin-top: -40px;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  background: linear-gradient(90deg, #3aa3ba, #6c6c6c);
-  transition: 0.1s;
+header nav.nav .header-cart__wrapper {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
   cursor: pointer;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  object-fit: contain;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-/* Увеличиваем кнопку при наведении на нее */
-.cart:hover {
-  transform: scale(1.1);
+header nav.nav .header-cart__wrapper:hover {
+  opacity: 0.8;
 }
 
-/* Стилизуем счетчик товаров */
-.cart__num {
-  position: absolute;
-  background-color: #0a9396;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+header nav.nav .header-cart__wrapper > .left-side {
+  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-flow: column;
+  align-items: flex-end;
+  margin-right: 7px;
+}
+
+header nav.nav .header-cart__wrapper > .left-side > span:first-child {
+  margin: 0 0 2px;
+  font-size: 16px;
+  font-weight: 600;
   color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  top: -5px;
-  right: -5px;
+}
+
+header nav.nav .header-cart__wrapper > .left-side > span:last-child.all-price {
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  margin-right: 14px;
+}
+
+header
+  nav.nav
+  .header-cart__wrapper
+  > .left-side
+  > span:last-child.all-price::after {
+  position: absolute;
+  display: block;
+  content: "₽";
+  margin-left: 4px;
+  font-size: 14px;
+  color: #fff;
+  bottom: 0;
+  right: 1px;
+}
+
+header nav.nav .header-cart__wrapper > .right-side {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+header nav.nav .header-cart__wrapper > .right-side > span {
+  font-size: 34px;
+  color: #009be3;
 }
 
 /* Создание бургер меню */

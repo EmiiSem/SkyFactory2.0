@@ -10,7 +10,9 @@ class CatalogController extends Controller
 
     public function indexAction()
     {
-        $this->view->render($this->title);
+        $products = $this->model->getByParams();
+
+        $this->view->render($this->title, ['list' => $products]);
     }
 
     public function productAction($productId = null)
@@ -21,6 +23,8 @@ class CatalogController extends Controller
             return;
         }
 
-        $this->view->render($this->title, ['productId ' => $productId]);
+        $result = $this->model->getById($parsed);
+
+        $this->view->render($this->title, ["product" => $result["product"], "avgStars" => $result["avgStars"]]);
     }
 }

@@ -31,8 +31,7 @@
                     <a href="#" class="nav__link">
                         <div class="form__search">
                             <!-- <form action="#" method="get"> -->
-                            <input type="text" class="text__search" name="ser" placeholder="Поиск товара..." value=""
-                                autocomplete="off">
+                            <input type="text" class="text__search" name="ser" placeholder="Поиск товара..." value="" autocomplete="off">
                             <!-- <input type="button" class="buttonSearch" onclick="FindOnPage('text-to-find'); return false;" value="Искать"/> -->
                             <!-- </form> -->
                         </div>
@@ -45,10 +44,17 @@
                 </li>
 
                 <li class="nav__item">
-                    <button class="cart" id="cart">
-                        <img class="cart__image" src="/assest/img/shopping_cart.svg" alt="Cart" />
-                        <div class="cart__num" id="cart_num">0</div>
-                    </button>
+                    <div class="header-cart__wrapper">
+                        <div class="left-side">
+                            <span>Корзина</span>
+                            <span class="all-price">0</span>
+                        </div>
+                        <div class="right-side">
+                            <span class="material-symbols-outlined">
+                                shopping_cart
+                            </span>
+                        </div>
+                    </div>
                 </li>
 
             </ul>

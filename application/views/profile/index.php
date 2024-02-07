@@ -2,6 +2,8 @@
 if (!IsAuthorized()) {
     Redirect("/account/login");
 }
+
+$info = $vars['userInfo'];
 ?>
 
 <div class="page container">
@@ -60,26 +62,20 @@ if (!IsAuthorized()) {
 
             <div class="general-info">
                 <p>
-                    <strong>Логин</strong>
+                    <strong>Имя</strong>
                     <span>
-                        login@login.ru
+                        <?= $info['fullName']; ?>
                     </span>
-                </p>
-                <p>
-                    <strong>ФИО</strong>
-                    <span>
-                        ФИО
-                    </span>
-                </p>
-                <p>
-                    <strong>Адрес</strong>
-                    <span>Проспект Мира, 40</span>
                 </p>
                 <p>
                     <strong>E-mail</strong>
                     <span>
-                        login@login.ru
+                        <?= $info['email']; ?>
                     </span>
+                </p>
+                <p>
+                    <strong>Адрес</strong>
+                    <span><?= $info['address'] ?></span>
                 </p>
             </div>
 

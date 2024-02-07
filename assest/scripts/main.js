@@ -1,3 +1,21 @@
+(function () {
+  $("button[class=card__add]").each(function () {
+    $(this).on("click", function (e) {
+      e.preventDefault();
+
+      const productId = e?.dataset?.id || -1;
+
+      let customEventAddToCart = new CustomEvent("cart-add", {
+        detail: {
+          productId,
+        },
+      });
+
+      document.dispatchEvent(customEventAddToCart);
+    });
+  });
+})();
+
 // Утилиты
 
 function toNum(str) {
@@ -82,6 +100,7 @@ cartNum.textContent = myCart.count;
 
 myCart.products = cardAddArr.forEach((cardAdd) => {
   cardAdd.addEventListener("click", (e) => {
+    console.log(e);
     e.preventDefault();
     const card = e.target.closest(".card");
     const product = new Product(card);

@@ -18,6 +18,7 @@
     }
     ?>
     <link rel="stylesheet" href="/assest/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
@@ -29,5 +30,8 @@
         <?php echo $content; ?>
     </div>
     <?php include 'footer.php'; ?>
+    <script src="/assest/scripts/main.js"></script>
+    <script src="/assest/scripts/cart.js"></script>
 </body>
+
 </html>
